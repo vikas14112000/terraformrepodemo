@@ -42,7 +42,7 @@ resource "aws_security_group" "alb_sg" {
 
 resource "aws_instance" "app" {
   count         = 2
-  ami           = "ami-0f5ee92e2d63afc18"
+  ami           = "ami-0b6c6ebed2801a5cb"
   instance_type = "t2.micro"
 
   subnet_id = element(data.aws_subnets.default.ids, count.index)
